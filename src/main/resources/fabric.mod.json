@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "irongolem",
+  "version": "${version}",
+  "name": "IronGolem",
+  "description": "",
+  "authors": [
+    "medisant"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/irongolem/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "me.medisant.irongolem.IronGolem"
+    ],
+    "modmenu": [
+      "me.medisant.irongolem.config.ModMenuIntegration"
+    ]
+  },
+  "mixins": [
+    "irongolem.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.8",
+    "fabric": "*",
+    "minecraft": ">=1.19"
+  }
+}

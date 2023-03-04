@@ -15,7 +15,7 @@ public class OpenCVUtils {
 
             if (img1.empty() || img2.empty()) {
                 System.out.println("Images could not be loaded");
-                return -1;
+                return 100;
             }
 
             Mat s1 = new Mat();
@@ -45,7 +45,7 @@ public class OpenCVUtils {
 
             if (img1.empty() || img2.empty()) {
                 System.out.println("Images could not be loaded");
-                return -1;
+                return 0.0;
             }
 
             double c1 = 6.5025, c2 = 58.5225;
@@ -116,7 +116,7 @@ public class OpenCVUtils {
 
             if (img1.empty() || img2.empty()) {
                 System.out.println("Images could not be loaded");
-                return new double[]{-1, -1, -1};
+                return new double[]{0.0, 0.0, 0.0};
             }
 
             // convert to HSV format

@@ -13,6 +13,9 @@ repositories {
 
     // cloth config
     maven { url "https://maven.shedaniel.me/" }
+
+    // minecraft
+    maven { url "https://libraries.minecraft.net" }
 }
 
 dependencies {
@@ -25,7 +28,7 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
     // Fabric API. This is technically optional, but you probably want it anyway.
-    // modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
     // https://mvnrepository.com/artifact/org.openpnp/opencv
     modImplementation "org.openpnp:opencv:${project.opencv_version}"
@@ -41,6 +44,9 @@ dependencies {
     modCompileOnly "com.terraformersmc:modmenu:${mod_menu_version}"
     modRuntimeOnly "com.terraformersmc:modmenu:${mod_menu_version}"
     //modImplementation "com.terraformersmc:modmenu:${mod_menu_version}"
+
+    // brigadier
+    //modImplementation "com.mojang:brigadier:${brigadier_version}"
 }
 
 processResources {

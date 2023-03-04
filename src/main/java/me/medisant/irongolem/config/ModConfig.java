@@ -13,12 +13,19 @@ public class ModConfig implements ConfigData {
     public static ModConfig instance;
 
     @ConfigEntry.Gui.Tooltip
-    public double psnr = 3.0;
+    public double psnr = 0.5;
+    @ConfigEntry.Gui.Tooltip
     public double mssim = 0.75;
-    public double histogram_1 = 97.5;
-    public double histogram_2 = 90.0;
-    public double histogram_3 = 75.0;
-    public boolean printResult = false;
+    @ConfigEntry.Gui.Tooltip
+    public double histogram_a = 99.99;
+    @ConfigEntry.Gui.Tooltip
+    public double histogram_b = 99.0;
+    @ConfigEntry.Gui.Tooltip
+    public double histogram_c = 90.0;
+    @ConfigEntry.Gui.Tooltip
+    public boolean logMatches = true;
+    @ConfigEntry.Gui.Tooltip
+    public boolean chatMessages = true;
 
     public static void init() {
         AutoConfig.register(ModConfig.class, GsonConfigSerializer::new);
